@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Copyright>$(Authors)</Copyright>
+    <Authors>BlueYellow</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="cross32.png" />
+    <None Remove="Icons\cross-black-32.png" />
+    <None Remove="Icons\cross-white-32.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\cross-black-32.png" />
+    <Resource Include="Icons\cross-white-32.png" />
+  </ItemGroup>
+
+</Project>

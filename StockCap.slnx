@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StockCap.Functions/StockCap.Functions.csproj" />
+  <Project Path="StockCap.Visual.Wpf/StockCap.Visual.Wpf.csproj" />
+</Solution>
