@@ -41,6 +41,9 @@ namespace StockCap.Visual.Wpf
         public double ViewWidth =>
             _measureAxisGrid.ActualWidth - 2 * ViewPadding;
 
+        public CartesianCoordinates NullPoint =>
+            (ViewPadding, ViewPadding);
+
         public int XAxisMaxCount
         {
             get => Controls.XCount - 1;

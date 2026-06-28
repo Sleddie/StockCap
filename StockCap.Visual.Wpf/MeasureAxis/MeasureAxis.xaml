@@ -5,5 +5,5 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:StockCap.Visual.Wpf"
              mc:Ignorable="d" Loaded="UserControl_Loaded" SizeChanged="UserControl_SizeChanged" FontSize="20" FontFamily="Cascadia Code">
-    <Grid x:Name="_measureAxisGrid"/>
+    <Grid x:Name="_measureAxisGrid" Background="White" Cursor="Cross"/>
 </UserControl>

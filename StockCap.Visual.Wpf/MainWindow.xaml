@@ -5,30 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockCap.Visual.Wpf"
         mc:Ignorable="d"
-        Title="Stock Cap"
-        d:DesignWidth="800" d:DesignHeight="480" WindowStyle="None" KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" WindowStartupLocation="CenterScreen" WindowState="Maximized" MouseDown="Window_MouseDown" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove">
-    <Grid>
-        <local:MeasureAxis Padding="16"/>
-        <Button Background="IndianRed" Height="20" Width="20" Margin="12" HorizontalAlignment="Right" VerticalAlignment="Top"
+        Title="Stock Cap" WindowStyle="None"
+        KeyDown="Window_KeyDown" KeyUp="Window_KeyUp" WindowStartupLocation="CenterScreen" WindowState="Maximized" MouseDown="Window_MouseDown" MouseUp="Window_MouseUp" MouseMove="Window_MouseMove">
+    <Grid Background="SteelBlue">
+        <Grid Background="White" Margin="16">
+            <local:MeasureAxis Margin="16"/>
+        </Grid>
+        <Grid>
+            <local:InputDevicesKeysDisplay x:Name="_keyDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
+            <Button Background="IndianRed" Height="32" Width="32" Margin="8" HorizontalAlignment="Right" VerticalAlignment="Top"
                 Click="CloseButton_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Grid>
-                        <Ellipse x:Name="ellipseShape" Fill="{TemplateBinding Background}"/>
-                        <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ellipseShape" Property="Fill" Value="Firebrick"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="ellipseShape" Property="Fill" Value="DarkRed"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-            <Image Source="/Icons/cross-white-32.png"/>
-        </Button>
-        <local:InputDevicesKeysDisplay x:Name="_keyDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Collapsed"/>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse x:Name="ellipseBack" Fill="White"/>
+                            <Ellipse x:Name="ellipseShape" Fill="{TemplateBinding Background}" Width="24" Height="24"/>
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ellipseShape" Property="Fill" Value="Firebrick"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="ellipseShape" Property="Fill" Value="DarkRed"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+                <Image Source="/Icons/cross-white-32.png" Width="16" Height="16"/>
+            </Button>
+        </Grid>
     </Grid>
 </Window>
