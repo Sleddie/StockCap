@@ -4,6 +4,10 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>$(AssemblyName)</Title>
+    <Authors>Sleddie</Authors>
+    <Company>BlueYellow</Company>
+    <Copyright>$(Authors)</Copyright>
   </PropertyGroup>
 
 </Project>

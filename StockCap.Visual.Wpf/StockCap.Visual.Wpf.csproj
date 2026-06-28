@@ -7,7 +7,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
     <Copyright>$(Authors)</Copyright>
-    <Authors>BlueYellow</Authors>
+    <Authors>Sleddie</Authors>
+    <Company>BlueYellow</Company>
+    <Title>$(AssemblyName)</Title>
   </PropertyGroup>
 
   <ItemGroup>
